@@ -1,33 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tiger
+  name: lion
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tiger
+      app: lion
   template:
     metadata:
       labels:
-        app: tiger
+        app: lion
     spec:
       containers:
-      - image: okteto.dev/tiger:latest
-        name: tiger
+      - image: okteto.dev/lion:latest
+        name: lion
         ports:
         - containerPort: 8080
         env:
         - name: PORT
           value: "8080"
         - name: ProxySite
-          value: "crazygames.com"
+          value: "animeflick.net"
         - name: Vless_UUID
-          value: "7a166aa4-a2aa-470d-a353-d06bf830b42e"
+          value: "72b4f5c0-90e8-4674-af6f-c7f85a810670"
         - name: Vless_Path
           value: "/root-etc-apt"
         - name: Vmess_UUID
-          value: "7a166aa4-a2aa-470d-a353-d06bf830b42e"
+          value: "72b4f5c0-90e8-4674-af6f-c7f85a810670"
         - name: Vmess_Path
           value: "/home-avi-video"
         - name: Share_Path
