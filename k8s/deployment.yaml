@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tiger
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tiger
+  template:
+    metadata:
+      labels:
+        app: tiger
+    spec:
+      containers:
+      - image: okteto.dev/tiger:latest
+        name: tiger
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ProxySite
+          value: "crazygames.com"
+        - name: Vless_UUID
+          value: "7a166aa4-a2aa-470d-a353-d06bf830b42e"
+        - name: Vless_Path
+          value: "/root-etc-apt"
+        - name: Vmess_UUID
+          value: "7a166aa4-a2aa-470d-a353-d06bf830b42e"
+        - name: Vmess_Path
+          value: "/home-avi-video"
+        - name: Share_Path
+          value: "/share233"
