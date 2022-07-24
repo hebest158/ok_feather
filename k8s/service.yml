@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: lion
+  name: mouse
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "lion"
+  - name: "mouse"
     port: 8080
   selector:
-    app: lion
+    app: mouse
