@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lion
+  name: mouse
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: lion
+      app: mouse
   template:
     metadata:
       labels:
-        app: lion
+        app: mouse
     spec:
       containers:
-      - image: okteto.dev/lion:latest
-        name: lion
+      - image: okteto.dev/mouse:latest
+        name: mouse
         ports:
         - containerPort: 8080
         env:
@@ -23,11 +23,11 @@ spec:
         - name: ProxySite
           value: "animeflick.net"
         - name: Vless_UUID
-          value: "72b4f5c0-90e8-4674-af6f-c7f85a810670"
+          value: "14c26de5-c99d-4189-83f9-2db35963ed6f"
         - name: Vless_Path
           value: "/root-etc-apt"
         - name: Vmess_UUID
-          value: "72b4f5c0-90e8-4674-af6f-c7f85a810670"
+          value: "14c26de5-c99d-4189-83f9-2db35963ed6f"
         - name: Vmess_Path
           value: "/home-avi-video"
         - name: Share_Path
