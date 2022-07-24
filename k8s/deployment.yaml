@@ -21,7 +21,7 @@ spec:
         - name: PORT
           value: "8080"
         - name: ProxySite
-          value: "animeflick.net"
+          value: "icook.tw"
         - name: Vless_UUID
           value: "14c26de5-c99d-4189-83f9-2db35963ed6f"
         - name: Vless_Path
